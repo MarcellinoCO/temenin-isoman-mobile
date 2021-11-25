@@ -76,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: MaterialButton(
-                    onPressed: () => print("Successul Login."),
+                    onPressed: () => Navigator.pushNamed(context, '/wilayah'),
                     color: Colors.pink,
                     child: Text(
                       'LOGIN',

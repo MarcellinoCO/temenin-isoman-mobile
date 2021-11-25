@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './login_screen.dart';
+import './screens/login_screen.dart';
+import './screens/wilayah_screen.dart';
 
 void main() {
   runApp(TemeninIsomanApp());
@@ -8,9 +9,13 @@ void main() {
 class TemeninIsomanApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: LoginScreen(),
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const LoginScreen(),
+        "/wilayah": (context) => WilayahScreen()
+      },
     );
   }
 }
