@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:first_flutter_app/login_screen.dart';
+import './login_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(TemeninIsomanApp());
 }
 
-class MyApp extends StatelessWidget {
+class TemeninIsomanApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(

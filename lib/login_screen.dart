@@ -6,29 +6,33 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: Text(
+            'Temenin Isoman',
+            style: TextStyle(color: Colors.blueGrey.shade800),
+          )),
       body: Padding(
         padding: const EdgeInsets.all(30),
         child: Center(
           child: SingleChildScrollView(
             child: Column(
               children: [
-                Text(
-                  'LOGIN',
-                  style: TextStyle(
+                Text('LOGIN',
+                    style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 60.0,
-                      color: Colors.blue),
-                ),
+                      color: Colors.pink,
+                    )),
                 SizedBox(
                   height: 25,
                 ),
                 TextFormField(
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    labelText: 'Email Address',
+                    labelText: 'Username',
                     border: OutlineInputBorder(),
-                    prefixIcon: Icon(Icons.email),
+                    prefixIcon: Icon(Icons.person),
                   ),
                 ),
                 SizedBox(
@@ -73,7 +77,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                   child: MaterialButton(
                     onPressed: () => print("Successul Login."),
-                    color: Colors.blue,
+                    color: Colors.pink,
                     child: Text(
                       'LOGIN',
                       style: TextStyle(
@@ -104,8 +108,11 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {
                         print('Sign Up');
                       },
-                      child: Text('Register Now'),
-                    )
+                      child: Text(
+                        'Register Now',
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ),
                   ],
                 ),
               ],
